@@ -106,26 +106,29 @@
                             }
                         } else {
                         %>
-                        <p> List of Products Goes Here </p>
+                        <p> Unfortunately none of our products meet your search criteria - please try again. </p>
                         <%
                             }
                         %>
                     </div>
                     <hr>
                 </div>
-                <% for (int i = 4; i < 7; i++) {%>
                 <div class="col-sm-2 sidenav">
+                <% ArrayList<Product> recProducts = ProductHandler.getProducts();
+                    for (int i = 4; i < 7; i++) {%>
+                
                     <div class="well">
                         <p>Recommended Product</p>
-                        <h4><%= products.get(i).getName()%></h4>
-                        <p>£<%= products.get(i).getPricePerDay()%> </p>
-                        <p><%= products.get(i).getDescription()%> </p>
+                        <h4><%= recProducts.get(i).getName()%></h4>
+                        <p>£<%= recProducts.get(i).getPricePerDay()%> </p>
+                        <p><%= recProducts.get(i).getDescription()%> </p>
 
                     </div>
+                
+                <%}%>
                 </div>
 
                 <div class="clear"></div>
-                <%}%>
             </div>
 
         </div>

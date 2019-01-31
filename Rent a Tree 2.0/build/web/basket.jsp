@@ -1,3 +1,4 @@
+<%@page import="com.rentatree.util.ProductHandler"%>
 <%@ page language="java" contentType="text/html; charset=UTF8" pageEncoding="UTF8"%>
 <%@ page import ="com.rentatree.model.Product" %>
 <%@ page import ="java.util.ArrayList" %>
@@ -48,17 +49,18 @@
             </div>
 
             <div class="col-sm-2 sidenav">
-                <h5>Some Products We'd Like To Recommend:</h5>
-                <div class="well">
-                    <p>Recommended Product</p>
+                <% ArrayList<Product> products = ProductHandler.getProducts();
+                    for (int i = 4; i < 7; i++) {%>
+                    <div class="well">
+                        <p>Recommended Product</p>
+                        <h4><%= products.get(i).getName()%></h4>
+                        <p>£<%= products.get(i).getPricePerDay()%> </p>
+                        <p><%= products.get(i).getDescription()%> </p>
+
+                    </div>
+                
+                <%}%>
                 </div>
-                <div class="well">
-                    <p>Recommended Product</p>
-                </div>
-                <div class="well">
-                    <p>Recommended Product</p>
-                </div>
-            </div>
         </div>
 
 

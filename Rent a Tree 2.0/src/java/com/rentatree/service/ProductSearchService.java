@@ -38,7 +38,7 @@ public class ProductSearchService extends HttpServlet {
                 int maxSize = Integer.parseInt(request.getParameter("maxSize"));
 
                 
-		ArrayList<Product> products = new ArrayList<Product>();
+		ArrayList<Product> products = new ArrayList<>();
 		try {
 			products = ProductHandler.getProductsSortBy(minSize, maxSize);
 		} catch (SQLException e) {

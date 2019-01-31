@@ -51,6 +51,7 @@
             <div class="col-sm-2 sidenav">
                 <% ArrayList<Product> products = ProductHandler.getProducts();
                     for (int i = 4; i < 7; i++) {%>
+                
                     <div class="well">
                         <p>Recommended Product</p>
                         <h4><%= products.get(i).getName()%></h4>

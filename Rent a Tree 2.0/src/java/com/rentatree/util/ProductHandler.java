@@ -29,16 +29,6 @@ public class ProductHandler {
         
         return resultSetToProducts(rs);
         
-        /*ArrayList<Product> products = new ArrayList<>();
-        
-        products.add(new Product(1, "Test", "Test Type", "Test Height", 0.2f));
-        products.add(new Product(2, "Test23", "Test Type", "Test Height", 0.2f));
-        products.add(new Product(3, "Test4", "Test Type", "Test Height", 0.2f));
-        products.add(new Product(4, "Test5", "Test Type", "Test Height", 0.2f));
-
-        return products;*/
-
-        
     }
 	
     public static ArrayList<Product> getProductsSortBy(int minSize, int maxSize

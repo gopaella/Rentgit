@@ -10,6 +10,7 @@ import com.rentatree.util.ProductHandler;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,11 +33,29 @@ public class ProductSearchService extends HttpServlet {
 		// Generate list of products; hand over to a JSP page to display them.
 		// We can get any parameters we need from the request (we don't need/use any at the moment).
                 
+                int minSize = 0;
+                int maxSize = 999;
+                ArrayList<String> materials = new ArrayList<>();
+                ArrayList<String> suppliers = new ArrayList<>();
+                
+                Map<String, String[]> checkParams = request.getParameterMap();
+                
                 //A bunch of strings
-                 //A bunch of strings
-                int minSize = Integer.parseInt(request.getParameter("minSize"));
-                int maxSize = Integer.parseInt(request.getParameter("maxSize"));
-
+                if(!request.getParameter("minSize").equals("")){
+                    minSize = Integer.parseInt(request.getParameter("minSize"));
+                }
+                
+                if(!request.getParameter("maxSize").equals("")){
+                    maxSize = Integer.parseInt(request.getParameter("maxSize"));
+                }
+                
+                for(String param : checkParams.keySet()) {
+                    if(checkParams.get(param).equals("on")) {
+                        suppliers.add(param);
+                    }
+                }
+                
+                System.out.println(suppliers.toString());
                 
 		ArrayList<Product> products = new ArrayList<>();
 		try {

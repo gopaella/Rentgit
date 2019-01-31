@@ -42,8 +42,14 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="natural" id="natural">
                                 <label class="form-check-label" for="natural">Natural</label>
+                                
+                            </div>
+                            <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="pvc" id="pvc">
                                 <label class="form-check-label" for="pvc">PVC</label>
+                                
+                            </div>
+                            <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="pe" id="pe">
                                 <label class="form-check-label" for="pe">PE</label>
                             </div>
@@ -54,10 +60,19 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="treenco" id="treenco">
                                 <label class="form-check-label" for="treenco">Tree and Co.</label>
+                                
+                            </div>
+                            <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="greenco" id="greenco">
                                 <label class="form-check-label" for="greenco">Green Company</label>
+                                
+                            </div>
+                            <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="fixtree" id="fixtree">
                                 <label class="form-check-label" for="fixtree">Fix Tree</label>
+                                
+                            </div>
+                            <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="christmasco" id="christmasco">
                                 <label class="form-check-label" for="christmasco">Christmas Co</label>
                             </div>

@@ -5,7 +5,7 @@
  */
 package com.rentatree.service;
 
-import com.rentatree.model.Product;
+import com.rentatree.model.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
@@ -30,8 +30,11 @@ public class BasketService extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        ArrayList<Product> curBasket = (ArrayList) session.getAttribute("basket");
-        curBasket.add((Product)request.getAttribute("newItem"));
+        ArrayList<BasketItem> curBasket = (ArrayList) session.getAttribute("basket");
+        
+        
+        
+        curBasket.add((BasketItem)request.getAttribute("newItem"));
         session.setAttribute("basket", curBasket);
         
         //redirect to basket.jsp

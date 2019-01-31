@@ -1,0 +1,17 @@
+body {
+	padding-top:65px;
+}
+
+.jumbotron {
+    background-image: url("../tree.jpeg");
+     background-size: contain; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #444444;
+    color: #ffffff;
+}
+
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }

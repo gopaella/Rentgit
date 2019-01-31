@@ -30,6 +30,15 @@ public class UserLoginService extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        doPost(request, response);
+        
+    }
+
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     * response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
@@ -60,15 +69,6 @@ public class UserLoginService extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(UserLoginService.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-     * response)
-     */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // If called via POST... do what we'd do if called via GET.
-        doGet(request, response);
     }
 
 }

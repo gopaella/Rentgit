@@ -22,7 +22,7 @@
 
                 %>
                 
-                <li class="disabled"><a>Signed in as <%=curUser%></a></li>
+                <li class="disabled"><a id="name-disp">Signed in as <%=curUser%></a></li>
                 <li><a href="logout"><span class="glyphicon glyphicon-log-in"></span>  Sign Out</a></li>
                 
                 <%              } else {
